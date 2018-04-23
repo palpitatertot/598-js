@@ -1,0 +1,13 @@
+<h1>Courses I took</h1> <ul>
+{{#each courses}}
+	<li>
+		{{title}}
+		<form method="get" action="/course">
+  			<input type="hidden" name="id" value={{_id}}>
+  			<input type="submit" value="Show Details">
+		</form>
+	</li>
+{{/each}} </ul>
+<form action="/addcourse">
+<input type="submit" value="Add New Course">
+</form>

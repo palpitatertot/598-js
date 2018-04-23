@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<title>Course List</title> </head>
+<body>
+<h1>Course Details</h1> 
+<p>
+			<table>
+			<tr> <td>{{course.title}}</td></tr>
+			<tr><td>{{course.instructor}}</td></tr>
+			<tr><td>{{course.semester}}</td></tr>
+		</table>
+		
+	<form method="get" action="/edit">
+  	<input type="hidden" name="id" value={{course._id}}>
+  	<input type="submit" value="Edit Course">
+	</form>
+	<form method="get" action="/delete">
+  	<input type="hidden" name="id" value={{couese._id}}>
+  	<input type="submit" value="X">
+	</form>
+	<a href="/">Return Home</a>
+</p>
+</body>
+</html>
+
